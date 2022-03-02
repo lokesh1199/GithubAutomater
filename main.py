@@ -1,9 +1,10 @@
-import requests
 import json
-from dotenv import load_dotenv
 import os
-from pathlib import Path
 import sys
+from pathlib import Path
+
+import requests
+from dotenv import load_dotenv
 
 
 def createRepo(api, name, private=False, auto_init=True):
