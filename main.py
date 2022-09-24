@@ -24,6 +24,9 @@ def createRepo(api, name, private=False, auto_init=True):
     data = json.dumps(data, indent=4)
 
     response = requests.post(url, headers=headers, data=data)
+    if response.status_code != 201:
+        raise Exception(response.text)
+
     return json.loads(response.text)
 
 
